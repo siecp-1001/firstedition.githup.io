@@ -1,0 +1,184 @@
+* {
+    font-family: "Robto";
+}
+
+html,
+body{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(141, 3, 134);
+}
+
+.container{
+    display: flex;
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+    perspective: 90rem;
+    perspective-origin: 50% 60%;
+}
+.div-transform{
+    display: flex;
+    transform: rotateX(10deg) rotateY(15deg) rotateZ(-9deg) scale3d(1,1,-0.9)
+     scale(1.1) translateX(50px);
+}
+
+.card{
+ 
+    color: aliceblue;
+    border-radius: 8px;
+    padding: 0px 18px;
+    width: 244px;
+    transition: 0.5s ease;
+    overflow: hidden;
+    transform: translate(0);
+}
+.card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0.85;
+
+}
+.card h2{
+    text-transform: capitalize;
+}
+.card h4{
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-top: 48px;
+}
+.card1{
+    background-size: cover;
+    transform: scale(1.02);
+    margin-right: 40px;
+}
+.card1:hover{
+    transform: scale(1.11);
+    box-shadow: -7px 4px 28px -3px #b527cf;
+}
+.card1::before{
+    background: linear-gradient( 90deg, #b527cf 0%,#3546f0 100%);
+}
+
+.card2{
+    background-size:cover;
+    transform: scale(1.01);
+    margin-right: 31px; 
+
+}
+.card2:hover{
+    transform: scale(1.1);
+    box-shadow: -7px 4px 28px -3px rgb(0, 153, 255);
+}
+.card2::before{
+    background: linear-gradient(90deg , rgb(0, 153, 255) 0%,  #b527cf 100%);
+}
+.card3{
+    background-size: cover;
+    
+}
+.card3:hover{
+    transform: scale(1.08);
+    box-shadow: -7px 4px 28px -3px #ff9500;
+
+}
+
+.card3::before{
+    background: linear-gradient(90deg ,#ff9500 0%,#d5cb0f 100%);
+}
+.title{
+    text-align: center;
+    margin-top: 50px;
+    text-transform: capitalize;
+    letter-spacing: 4px;
+}
+.container2{
+    position: absolute;
+  
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+   
+}
+
+.container2 .btn{
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    background: rgb(252, 178, 178);
+    box-shadow: 0 5px 15px -5px #aaa;
+    margin: 10px;
+    border-radius: 30%;
+    overflow: hidden;
+    position: relative;
+    color: #42d2ff;
+}
+.container2 .btn i{
+    position: relative;
+    z-index: 4;
+    line-height: 90px;
+    font-size: 26px;
+    transition: 0.3s ease-in-out;
+}
+
+.container2 .btn::before{
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: linear-gradient(#00c6ff,#0072ff);
+    transform: rotate(45deg);
+    left: -110%;
+    top: 90%;
+}
+.container2 .btn:hover i{
+    color: #fff;
+    transform: scale(1.3);
+}
+.container2 .btn:hover::before{
+    animation: onHover 0.7s 1;
+    left: -10%;
+    top: -10%;
+}
+
+@keyframes onHover{
+    0%{
+        left: -110%;
+        top: 90%;
+    }
+    50%{
+        left: 10%;
+        top: -50%;
+    }
+    100%{
+        top: -10%;
+        left: -10%;
+    }
+}
+.title h1 {
+    text-align: center;
+    display: inline;
+    color: rgb(62, 0, 119);
+    transform: scale(1.01);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 100% 100%;
+    transition: background-size 1000ms, color 700ms;
+}
+.title h1:hover {
+    background-size: 0% 100%;
+    transform: scale(1.11);
+    box-shadow: -7px 4px 28px -3px #b527cf;
+    color: rgb(175, 4, 138);
+}
+.title h1::before{
+    background: linear-gradient( 90deg, #b527cf 0%,#dbdbdb 100%);
+}
