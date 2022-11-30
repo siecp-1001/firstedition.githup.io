@@ -182,3 +182,153 @@ body{
 .title h1::before{
     background: linear-gradient( 90deg, #b527cf 0%,#dbdbdb 100%);
 }
+
+
+a{
+    position: relative;
+    padding: 20px 50px;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 200px;
+    overflow: hidden;
+    border-radius: 40px;
+}
+
+
+a span{
+    position: relative;
+    
+    font-size: 20px;
+    font-family: Arial;
+    letter-spacing: 8px;
+    z-index: 1;
+}
+a .liqued{
+    position: absolute;
+    top: -60px;
+    left: 0;
+    width: 100px;
+    height: 200px;
+   
+  
+    transition: .5s;
+
+}
+
+a .liqued::after,
+a .liqued::before{
+    content: '';
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+   left: 90%;
+    transform: translate(-50%,-70%);
+    background: rgb(194, 8, 169);
+}
+
+a .liqued::before{
+    border-radius: 45%;
+    background: linear-gradient( 90deg, #b527cf 0%,#3546f0 100%);
+    animation: animate 10s linear infinite;
+}
+a .liqued::after{
+    border-radius: 40px;
+    background: linear-gradient( 90deg, #b527cf 0%,#3546f0 100%);
+}
+a:hover .liqued{
+    top: -120px;
+}
+/*///*/
+a .seed{
+    position: absolute;
+    top: -60px;
+    left: 0;
+    width: 100px;
+    height: 200px;
+   
+  
+    transition: .5s;
+
+}
+
+a .seed::after,
+a .seed::before{
+    content: '';
+    width: 180%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+   left: 85%;
+    transform: translate(-50%,-70%);
+    background: rgb(194, 8, 169);
+}
+
+a .seed::before{
+    border-radius: 45%;
+    background: linear-gradient(90deg , rgb(0, 153, 255) 0%,  #b527cf 100%);
+    animation: animate 10s linear infinite;
+}
+a .seed::after{
+    border-radius: 40px;
+    background: linear-gradient(90deg , rgb(0, 153, 255) 0%,  #b527cf 100%);
+}
+a:hover .seed{
+    top: -120px;
+}
+@keyframes animate{
+    0%{
+        transform: translate(-50%,-69%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%,-69%) rotate(360deg);
+    }
+}
+
+
+/**/
+a .upload{
+    position: absolute;
+    top: -60px;
+    left: 0;
+    width: 120px;
+    height: 200px;
+   
+  
+    transition: .5s;
+
+}
+
+a .upload::after,
+a .upload::before{
+    content: '';
+    width: 180%;
+    height: 200%;
+    position: absolute;
+    top: 5px;
+   left: 80%;
+    transform: translate(-50%,-70%);
+    background: rgb(194, 8, 169);
+}
+
+a .upload::before{
+    border-radius: 45%;
+    background:   linear-gradient(90deg ,#ff9500 0%,#d5cb0f 100%);
+    animation: animate 10s linear infinite;
+}
+a .upload::after{
+    border-radius: 40px;
+    background:   linear-gradient(90deg ,#ff9500 0%,#d5cb0f 100%);
+}
+a:hover .upload{
+    top: -120px;
+}
+@keyframes animate{
+    0%{
+        transform: translate(-50%,-69%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%,-69%) rotate(360deg);
+    }
+}
