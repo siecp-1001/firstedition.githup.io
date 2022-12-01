@@ -40,7 +40,7 @@ body{
     bottom: -80px;
 }
 form{
-    height: 520px;
+    height: 600px;
     width: 400px;
     background-color: rgba(255, 255, 255, 0.13);
     position: absolute;
@@ -86,30 +86,21 @@ input{
 ::placeholder{
     color: #e5e5e5;;
 }
-button{
-    margin-top: 50px;
-    width: 100%;
-    background-color: #ffffff;
-    color: #080710;
-    padding: 15px 0;
-    font-size: 18px;
-    font-weight: 600;
-    border-radius: 5px;
-    cursor: pointer;
-}
+
 
 .social{
-    margin-top: 30px;
+    margin-top: 5px;
     display: flex;
 }
 .social div{
     background: red;
-    width: 150px;
+    width: 100px;   
     border-radius:  3px;
-    padding:  5px 10px 10px 5px;
+    padding:  5px 10px 5px 5px;
     background-color: rgba(255, 255, 255, 0.27);
     color: #eaf0fb;
-    text-align: center; 
+    text-align: center;
+    margin-bottom:50px ;
 }
 .social div:hover{
     background-color: rgba(255, 255, 255, 0.47);
@@ -117,10 +108,86 @@ button{
 }
 
 .social .fb{
-    margin-left: 25px;
+    margin-left: 70px;
 }
 .social i{
-    margin-right: 4px;
+    margin-right: 0px;
 }
 
 
+.SIGNUP{
+    margin-top: 15px ;
+    display: flex;
+}
+
+
+.button a{
+    position: relative;
+    padding: 20px 40px;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 200px;
+    overflow: hidden;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    margin-top: 10px; 
+    margin-left: 19%;
+}
+
+
+.button a span{
+    position: relative;
+    margin-left: 2px;
+    font-size: 20px;
+    font-family: Arial;
+    letter-spacing: 8px;
+    z-index: 1;
+}
+.button a .liqued{
+    position: absolute;
+    top: -80px;
+    left: 0;
+    width: 200px;
+    height: 200px;
+   
+    transition: .5s;
+
+}
+
+.button a .liqued::after,
+.button a .liqued::before{
+    content: '';
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-75%);
+    background: #000;
+}
+
+.button a .liqued::before{
+    border-radius: 45%;
+    background: rgba(20,20,20, 1);
+    animation: animate 10s linear infinite;
+}
+.button a .liqued::after{
+    border-radius: 40%;
+    background: rgba(20,20,20, .5);
+    animation: animate 10s linear infinite;
+}
+.button a:hover .liqued{
+    top: -120px;
+}
+@keyframes animate{
+    0%{
+        transform: translate(-50%,-69%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%,-69%) rotate(360deg);
+    }
+}
