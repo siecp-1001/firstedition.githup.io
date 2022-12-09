@@ -32,3 +32,11 @@ var context=canvas.getcontext('2d');
 snap.addEventListener('click',function(){
     context.drawImage(video,0,0,640,480);
 });
+
+window.addEventListener("load",() => {
+    const loader= document.querySelector(".loader");
+    loader.classList.add("loader-hidden");
+    loader.addEventListener("transitionend",()=>{
+        document.body.removeChild("loader");
+    })
+});

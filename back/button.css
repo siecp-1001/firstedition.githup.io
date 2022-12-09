@@ -1,0 +1,64 @@
+a{
+    position: relative;
+    padding: 20px 50px;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 200px;
+    overflow: hidden;
+    border-radius: 40px;
+}
+
+
+a span{
+    position: relative;
+    
+    font-size: 20px;
+    font-family: Arial;
+    letter-spacing: 8px;
+    z-index: 1;
+}
+a .liqued{
+    position: absolute;
+    top: -80px;
+    left: 0;
+    width: 200px;
+    height: 200px;
+   
+    transition: .5s;
+
+}
+
+a .liqued::after,
+a .liqued::before{
+    content: '';
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-75%);
+    background: #000;
+}
+
+a .liqued::before{
+    border-radius: 45%;
+    background: rgba(20,20,20, 1);
+    animation: animate 10s linear infinite;
+}
+a .liqued::after{
+    border-radius: 40%;
+    background: rgba(20,20,20, .5);
+    animation: animate 10s linear infinite;
+}
+a:hover .liqued{
+    top: -120px;
+}
+@keyframes animate{
+    0%{
+        transform: translate(-50%,-69%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%,-69%) rotate(360deg);
+    }
+}

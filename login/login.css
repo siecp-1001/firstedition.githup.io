@@ -191,3 +191,52 @@ input{
         transform: translate(-50%,-69%) rotate(360deg);
     }
 }
+
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #aaa;
+    transition:
+    opacity 0.90s,visibiity 0.90s ;
+    
+}
+.loader-hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+.loader::after{
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddd;
+    border-top-color: #b527cf ;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    animation: loading .90s ease infinite;
+    -webkit-animation: loading .90s ease infinite;
+}
+@keyframes loading{
+    from{
+        transform: rotate(0turn);
+        -webkit-transform: rotate(0turn);
+        -moz-transform: rotate(0turn);
+        -ms-transform: rotate(0turn);
+        -o-transform: rotate(0turn);
+}
+to{
+    transform: rotate(1turn);
+    -webkit-transform: rotate(1turn);
+    -moz-transform: rotate(1turn);
+    -ms-transform: rotate(1turn);
+    -o-transform: rotate(1turn);
+}
+}

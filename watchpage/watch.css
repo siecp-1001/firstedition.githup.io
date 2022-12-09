@@ -295,3 +295,90 @@ video {
 .title h1::before{
     background: linear-gradient( 90deg, #b527cf 0%,#dbdbdb 100%);
 }
+
+.wrapper{
+
+    position: relative;
+}
+.wrapper .sidebar{
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background: #b527cf;
+    padding: 30px 0;
+}
+.wrapper .sidebar ul li{
+    padding: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: 1px solid rgba(225, 225,225, 0.05);
+}
+.wrapper .sidebar ul li a{
+    position: relative;
+    padding: 15px;
+    display: flex;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 50px;
+    overflow: hidden;
+    border-radius: 40px;
+}
+.wrapper .sidebar ul li a .fa{
+    width: 20px;
+}
+
+.wrapper .sidebar ul li:hover{
+    background: #dbdbdb;
+}
+
+.wrapper .sidebar ul li:hover a{
+  color: #fff;
+}
+/**/
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #aaa;
+    transition:
+    opacity 0.90s,visibiity 0.90s ;
+    
+}
+.loader-hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+.loader::after{
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddd;
+    border-top-color: #b527cf ;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    animation: loading .90s ease infinite;
+    -webkit-animation: loading .90s ease infinite;
+}
+@keyframes loading{
+    from{
+        transform: rotate(0turn);
+        -webkit-transform: rotate(0turn);
+        -moz-transform: rotate(0turn);
+        -ms-transform: rotate(0turn);
+        -o-transform: rotate(0turn);
+}
+to{
+    transform: rotate(1turn);
+    -webkit-transform: rotate(1turn);
+    -moz-transform: rotate(1turn);
+    -ms-transform: rotate(1turn);
+    -o-transform: rotate(1turn);
+}
+}
